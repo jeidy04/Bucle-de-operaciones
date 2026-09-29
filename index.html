@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+  Página: Bucle de operaciones
+  Descripción: el usuario ingresa 2 números y un bucle de 5 iteraciones
+  aplica una operación distinta en cada vuelta (suma, resta,
+  multiplicación, división y módulo).
+  Archivos: index.html (estructura) + style.css (diseño) + script.js (lógica)
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Hace que la página se adapte a celulares -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora en bucle</title>
+  <!-- Enlazamos la hoja de estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app">
+
+    <!-- Encabezado -->
+    <header class="encabezado">
+      <span class="etiqueta">JavaScript · HTML · CSS</span>
+      <h1>Calculadora <em>en bucle</em></h1>
+      <p>Ingresa dos números y mira las 5 operaciones, una por iteración.</p>
+    </header>
+
+    <!-- Panel de entrada de datos -->
+    <section class="panel">
+      <div class="campos">
+        <label for="a">
+          Número 1
+          <input id="a" type="number" step="any" value="10">
+        </label>
+
+        <label for="b">
+          Número 2
+          <input id="b" type="number" step="any" value="3">
+        </label>
+      </div>
+
+      <button id="btnCalcular" type="button">Calcular</button>
+
+      <!-- Aquí se muestran los mensajes de error de validación -->
+      <p id="mensajeError" role="alert"></p>
+    </section>
+
+    <!-- Aquí JavaScript inserta los 5 resultados -->
+    <ol id="resultados" class="resultados"></ol>
+
+  </main>
+
+  <!-- El script va al final para que el HTML ya exista al ejecutarse -->
+  <script src="script.js"></script>
+</body>
+</html>
